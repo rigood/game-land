@@ -1,0 +1,209 @@
+@font-face {
+  font-family: "GmarketSansMedium";
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansMedium.woff")
+    format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+:root {
+  --bg: #ced7f6;
+  --gray: #ced4da;
+}
+
+ul,
+li {
+  list-style: none;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "GmarketSansMedium";
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background-color: var(--bg);
+}
+
+.wrapper {
+  width: 520px;
+  height: 590px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  background-color: white;
+  padding: 60px 30px;
+  border-radius: 10px;
+}
+
+.menu {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  width: 400px;
+}
+
+.title-time {
+  font-size: 28px;
+}
+
+/* .title-time.blink {
+  animation: blink 1s step-end infinite;
+  color: #fa5252;
+}
+
+@keyframes blink {
+  50% {
+    opacity: 0;
+  }
+} */
+
+.nav {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.play-button,
+.reset-button,
+.home-button {
+  cursor: pointer;
+}
+
+.play-button {
+  display: none;
+  width: 24px;
+  height: 24px;
+}
+
+.home-button {
+  width: 28px;
+  height: 28px;
+}
+
+.random-box,
+.upload-box {
+  width: 400px;
+  height: 180px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  border-radius: 5px;
+  border: 2px dashed var(--gray);
+  cursor: pointer;
+}
+
+.wrapper.active .random-box,
+.wrapper.active .upload-box {
+  display: none;
+}
+
+.puzzle-box {
+  width: 400px;
+  height: 400px;
+  display: none;
+  grid-template-columns: repeat(4, 1fr);
+}
+
+.wrapper.active .puzzle-box {
+  display: grid;
+  border: 1px solid black;
+}
+
+.puzzle-piece {
+  width: 100px;
+  height: 100px;
+  border: 1px solid black;
+}
+
+/* puzzle pieces */
+
+.list0 {
+  background-position-x: 0px;
+  background-position-y: 0px;
+}
+
+.list1 {
+  background-position-x: -100px;
+  background-position-y: 0px;
+}
+
+.list2 {
+  background-position-x: -200px;
+  background-position-y: 0px;
+}
+
+.list3 {
+  background-position-x: -300px;
+  background-position-y: 0px;
+}
+
+.list4 {
+  background-position-x: 0px;
+  background-position-y: -100px;
+}
+
+.list5 {
+  background-position-x: -100px;
+  background-position-y: -100px;
+}
+
+.list6 {
+  background-position-x: -200px;
+  background-position-y: -100px;
+}
+
+.list7 {
+  background-position-x: -300px;
+  background-position-y: -100px;
+}
+
+.list8 {
+  background-position-x: 0px;
+  background-position-y: -200px;
+}
+
+.list9 {
+  background-position-x: -100px;
+  background-position-y: -200px;
+}
+
+.list10 {
+  background-position-x: -200px;
+  background-position-y: -200px;
+}
+
+.list11 {
+  background-position-x: -300px;
+  background-position-y: -200px;
+}
+
+.list12 {
+  background-position-x: 0px;
+  background-position-y: -300px;
+}
+
+.list13 {
+  background-position-x: -100px;
+  background-position-y: -300px;
+}
+
+.list14 {
+  background-position-x: -200px;
+  background-position-y: -300px;
+}
+
+.list15 {
+  background-position-x: -300px;
+  background-position-y: -300px;
+}

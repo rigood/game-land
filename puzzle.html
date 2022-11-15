@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Puzzle Game | Game Land</title>
+    <link rel="stylesheet" href="css/puzzle.css" />
+    <script src="js/puzzle.js" defer></script>
+  </head>
+  <body>
+    <div class="wrapper">
+      <div class="menu">
+        <h1 class="title-time">Puzzle Game</h1>
+        <div class="nav">
+          <img src="img/play.png" class="play-button" alt="play button" />
+          <img src="img/reset.png" class="reset-button" alt="reset button" />
+          <img src="img/home.png" class="home-button" alt="home button" />
+        </div>
+      </div>
+      <div class="random-box">
+        <img src="img/picture.png" alt="load random puzzle image" />
+        <span>Random Puzzle Image</span>
+      </div>
+      <div class="upload-box">
+        <input type="file" accept="image/*" hidden />
+        <img src="img/upload.png" alt="upload puzzle image" />
+        <span>Upload Puzzle Image</span>
+      </div>
+      <ul class="puzzle-box"></ul>
+    </div>
+  </body>
+</html>
