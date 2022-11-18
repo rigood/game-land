@@ -9,6 +9,7 @@
 :root {
   --main: #8465dd;
   --strong: #5f3dc4;
+  --second: pink;
   --gray: gray;
 }
 
@@ -58,11 +59,14 @@ body {
   perspective-origin: 50% 20%;
 }
 
+/* //////////////////////////////////////////////////////// */
+
 .typing-text {
   font-size: 48px;
   font-weight: 600;
   color: white;
-  margin: 100px 0;
+  margin-top: 100px;
+  margin-bottom: 40px;
 
   /* 타이핑 효과를 위한 설정 */
 
@@ -96,10 +100,64 @@ body {
   }
 }
 
+/* //////////////////////////////////////////////////////// */
+
+.dynamic-texts {
+  height: 43px;
+  line-height: 43px;
+  overflow: hidden;
+}
+
+/* slide 애니메이션을 통해 단어를 점점 위로 밀어올림 */
+
+.dynamic-texts li {
+  position: relative;
+  top: 0;
+  font-size: 32px;
+  color: var(--second);
+  animation: slide 10.8s steps(6) infinite;
+  /* step = 단어 개수 */
+}
+
+@keyframes slide {
+  100% {
+    top: -257px;
+  }
+}
+
+/* game-typing 애니메이션을 통해 커서를 왼쪽에서 오른쪽으로 이동시킴*/
+
+.dynamic-texts li span {
+  position: relative;
+}
+
+.dynamic-texts li span::after {
+  content: "";
+  width: 100%;
+  height: 100%;
+  border-left: 2px solid var(--second);
+  background-color: var(--main);
+  position: absolute;
+  left: 0;
+  animation: game-typing 1.8s steps(11) infinite;
+  /* step = 가장 긴 단어 길이 */
+  padding-bottom: 5px;
+  /* G마켓산스체 줄간격이 안맞아서 조절 */
+}
+
+@keyframes game-typing {
+  100% {
+    left: 100%;
+  }
+}
+
+/* //////////////////////////////////////////////////////// */
+
 .game-list {
   width: 250px;
   height: 300px;
   padding: 40px;
+  margin-top: 80px;
   margin-bottom: 100px;
 
   /* transform 속성은 자식 요소가

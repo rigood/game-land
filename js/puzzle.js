@@ -211,4 +211,4 @@ randomBox.addEventListener("click", setPuzzleWithRandomImage);
 
 playButton.addEventListener("click", startGame);
 resetButton.addEventListener("click", resetGame);
-homeButton.addEventListener("click", () => {});
+homeButton.addEventListener("click", () => (location.href = "index.html"));

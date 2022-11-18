@@ -35,6 +35,6 @@
 ## 📃 출처 및 참고
 
 - 아이콘 - [icons8](https://icons8.com/)
-- 텍스트 타이핑 효과 - [유튜브 수코딩](https://youtu.be/xCZJkPy1WB8)
+- 텍스트 타이핑 효과 - [유튜브 수코딩](https://youtu.be/xCZJkPy1WB8), [CodingNepal](https://youtu.be/m0o0QNpY9-0)
 - 회전하는 카드 - [sypear님 깃허브](https://github.com/sypear/rotating-menu-board)
 - 퍼즐 게임 - [유튜브 데브리](https://youtu.be/iTBZdg7tg-w)
