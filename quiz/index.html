@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Quiz Game | Game Land</title>
+    <link rel="stylesheet" href="index.css" />
+    <script src="index.js" defer></script>
+    <script src="quiz.js" defer></script>
+  </head>
+  <body>
+    <!-- Info Box -->
+    <!-- <div class="info-box">
+      <div class="info-title">Rules of Quiz Game</div>
+      <ul class="info-rules">
+        <li class="rule">1. 한 문제당 제한시간은 <span>15초</span>입니다.</li>
+        <li class="rule">2. 답을 고른 후에는 다른 보기로 바꿀 수 없습니다.</li>
+        <li class="rule">3. 제한시간이 지나면 답을 고를 수 없습니다.</li>
+        <li class="rule">4. 퀴즈를 푸는 동안 중단할 수 없습니다.</li>
+        <li class="rule">5. 정답 개수에 따라 포인트를 획득할 수 있습니다.</li>
+      </ul>
+      <div class="info-buttons">
+        <button class="exit">Exit Quiz</button>
+        <button class="start">Start Quiz</button>
+      </div>
+    </div> -->
+
+    <!-- Quiz Box -->
+    <div class="quiz-box active">
+      <header>
+        <div class="quiz-title">Quiz Game</div>
+        <div class="quiz-timer">
+          <div class="timer-text">Time</div>
+          <div class="timer-time">15</div>
+        </div>
+        <div class="quiz-timeline"></div>
+      </header>
+      <main>
+        <div class="quiz-text">제이슨 생일은???</div>
+        <ul class="quiz-options">
+          <li>1월 1일</li>
+          <li>1월 1일</li>
+          <li>1월 1일</li>
+          <li>1월 1일</li>
+        </ul>
+      </main>
+      <footer>
+        <div class="quiz-count">1 / 5</div>
+        <button class="next">Next</button>
+      </footer>
+    </div>
+
+    <!-- Result Box -->
+    <div class="result-box"></div>
+  </body>
+</html>
