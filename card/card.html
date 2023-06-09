@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="card.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+      integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <script src="card.js" defer></script>
+    <title>카드 짝맞추기 게임</title>
+  </head>
+  <body>
+    <div class="container">
+      <h1 class="title">카드 짝 맞추기 게임</h1>
+      <div id="congratMsg">✨ Mission Clear ✨</div>
+      <div id="time-score">
+        <div id="time">
+          Time :
+          <strong>30</strong>
+        </div>
+        <div id="score">
+          Score :
+          <strong id="matchedCardNum">0</strong>
+          / 8
+        </div>
+      </div>
+      <div class="wrapper">
+        <ul class="cards">
+          <li class="card">
+            <div class="view front-view">
+              <img src="img/mandu.png" />
+            </div>
+            <div class="view back-view">
+              <img src="img/1.jpg" alt="card image" />
+            </div>
+          </li>
+          <li class="card">
+            <div class="view front-view">
+              <img src="img/mandu.png" />
+            </div>
+            <div class="view back-view">
+              <img src="img/2.jpg" alt="card image" />
+            </div>
+          </li>
+          <li class="card">
+            <div class="view front-view">
+              <img src="img/mandu.png" />
+            </div>
+            <div class="view back-view">
+              <img src="img/3.jpg" alt="card image" />
+            </div>
+          </li>
+          <li class="card">
+            <div class="view front-view">
+              <img src="img/mandu.png" />
+            </div>
+            <div class="view back-view">
+              <img src="img/4.jpg" alt="card image" />
+            </div>
+          </li>
+          <li class="card">
+            <div class="view front-view">
+              <img src="img/mandu.png" />
+            </div>
+            <div class="view back-view">
+              <img src="img/5.jpg" alt="card image" />
+            </div>
+          </li>
+          <li class="card">
+            <div class="view front-view">
+              <img src="img/mandu.png" />
+            </div>
+            <div class="view back-view">
+              <img src="img/6.jpg" alt="card image" />
+            </div>
+          </li>
+          <li class="card">
+            <div class="view front-view">
+              <img src="img/mandu.png" />
+            </div>
+            <div class="view back-view">
+              <img src="img/7.jpg" alt="card image" />
+            </div>
+          </li>
+          <li class="card">
+            <div class="view front-view">
+              <img src="img/mandu.png" />
+            </div>
+            <div class="view back-view">
+              <img src="img/8.jpg" alt="card image" />
+            </div>
+          </li>
+          <li class="card">
+            <div class="view front-view">
+              <img src="img/mandu.png" />
+            </div>
+            <div class="view back-view">
+              <img src="img/1.jpg" alt="card image" />
+            </div>
+          </li>
+          <li class="card">
+            <div class="view front-view">
+              <img src="img/mandu.png" />
+            </div>
+            <div class="view back-view">
+              <img src="img/2.jpg" alt="card image" />
+            </div>
+          </li>
+          <li class="card">
+            <div class="view front-view">
+              <img src="img/mandu.png" />
+            </div>
+            <div class="view back-view">
+              <img src="img/3.jpg" alt="card image" />
+            </div>
+          </li>
+          <li class="card">
+            <div class="view front-view">
+              <img src="img/mandu.png" />
+            </div>
+            <div class="view back-view">
+              <img src="img/4.jpg" alt="card image" />
+            </div>
+          </li>
+          <li class="card">
+            <div class="view front-view">
+              <img src="img/mandu.png" />
+            </div>
+            <div class="view back-view">
+              <img src="img/5.jpg" alt="card image" />
+            </div>
+          </li>
+          <li class="card">
+            <div class="view front-view">
+              <img src="img/mandu.png" />
+            </div>
+            <div class="view back-view">
+              <img src="img/6.jpg" alt="card image" />
+            </div>
+          </li>
+          <li class="card">
+            <div class="view front-view">
+              <img src="img/mandu.png" />
+            </div>
+            <div class="view back-view">
+              <img src="img/7.jpg" alt="card image" />
+            </div>
+          </li>
+          <li class="card">
+            <div class="view front-view">
+              <img src="img/mandu.png" />
+            </div>
+            <div class="view back-view">
+              <img src="img/8.jpg" alt="card image" />
+            </div>
+          </li>
+        </ul>
+      </div>
+      <div id="buttons">
+        <button type="button" id="replay">
+          <i class="fa-solid fa-rotate-left"></i>
+          다시하기
+        </button>
+        <button type="button" id="home">
+          <i class="fa-solid fa-home"></i>
+          메인으로
+        </button>
+      </div>
+    </div>
+  </body>
+</html>
