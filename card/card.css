@@ -46,25 +46,19 @@ body {
   font-size: 2.8rem;
 }
 
-#congratMsg {
+#game-status {
   display: none;
   font-size: 3.6rem;
   color: var(--hotpink);
   margin: 10px 0 30px;
 }
 
-#time-score {
+#timer-score {
   width: 100%;
   display: flex;
   justify-content: space-between;
   align-items: center;
   margin: 20px 0;
-}
-
-#time,
-#time strong,
-#score,
-#score strong {
   font-size: 2.4rem;
   color: var(--hotpink);
 }
@@ -159,10 +153,10 @@ body {
 }
 
 .card.shake {
-  animation: shake 0.35s ease-in-out;
+  animation: shake 0.25s ease-in-out;
 
   @media (max-width: 800px) {
-    animation: smallShake 0.35s ease-in-out;
+    animation: smallShake 0.25s ease-in-out;
   }
 }
 
@@ -204,12 +198,12 @@ body {
   }
 }
 
-#buttons {
+#btns {
   display: none;
   margin: 30px 0;
 }
 
-#buttons button {
+#btns button {
   display: flex;
   align-items: center;
   background-color: var(--babypink);
@@ -222,11 +216,11 @@ body {
   cursor: pointer;
 }
 
-#buttons button:first-child {
+#btns button:first-child {
   margin-right: 20px;
 }
 
-#buttons button i {
+#btns button i {
   margin-right: 10px;
   font-size: 1.6rem;
 }
