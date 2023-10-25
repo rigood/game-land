@@ -88,7 +88,8 @@ const setPuzzleWithRandomImage = () => {
     .fill()
     .forEach((_, index) => {
       const li = document.createElement("li");
-      li.style.backgroundImage = "url('https://placeimg.com/400/400/any')";
+      li.style.backgroundImage =
+        "url('https://source.unsplash.com/random/400x400')";
       li.setAttribute("draggable", "true");
       li.setAttribute("data-index", index);
       li.classList.add("puzzle-piece", `list${index}`);
