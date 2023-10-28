@@ -1,4 +1,4 @@
-# Game Land
+# 🎪 Game Land
 
 JavaScript를 이용하여 다양한 미니 게임을 만들어 보는 프로젝트
 
