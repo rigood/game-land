@@ -41,8 +41,7 @@ JavaScript를 이용하여 다양한 미니 게임을 만들어 보는 프로젝
 ## 📃 출처 및 참고
 
 - 아이콘 - [icons8](https://icons8.com/)
-- 텍스트 타이핑 효과 - [유튜브 수코딩](https://youtu.be/xCZJkPy1WB8), [CodingNepal](https://youtu.be/m0o0QNpY9-0)
+- 텍스트 타이핑 효과 - [CodingNepal-1](https://www.youtube.com/watch?v=DLs1X9T1GcY), [CodingNepal-2](https://youtu.be/m0o0QNpY9-0)
 - 회전하는 카드 - [sypear님 깃허브](https://github.com/sypear/rotating-menu-board)
 - 퍼즐 게임 - [유튜브 데브리](https://youtu.be/iTBZdg7tg-w)
 - 카드 게임 - [CodingNepal](https://www.youtube.com/watch?v=DABkhfsBAWw)
-- 퀴즈 게임 - [Web Dev Simplified](https://youtu.be/riDzcEQbX6k)

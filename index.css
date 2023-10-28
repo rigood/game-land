@@ -7,39 +7,26 @@
 }
 
 :root {
-  --main: #8465dd;
-  --strong: #5f3dc4;
-  --second: pink;
-  --gray: gray;
-}
-
-a {
-  all: unset;
-}
-
-button {
-  all: unset;
-  font-family: inherit;
-}
-
-ul,
-li {
-  list-style: none;
+  --bg-color: #8465dd;
+  --game-color: pink;
+  --card-title-color: #5f3dc4;
+  --card-desc-color: #808080;
 }
 
 * {
+  box-sizing: border-box;
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
-  font-family: "GmarketSansMedium";
 }
 
 body {
   display: flex;
   flex-direction: column;
+  justify-content: center;
   align-items: center;
   min-height: 100vh;
-  background-color: var(--main);
+  padding: 40px 0;
+  background-color: var(--bg-color);
 
   /* 원근감을 위해 3d 공간에서 대상과 관측점 사이의
   거리를 나타내는 perspective 속성을 적용함 */
@@ -49,105 +36,112 @@ body {
   자식에게만 적용된다. (자손에는 적용X) */
 
   /* game-list 클래스에 원근감을 주기 위해
- game-list 클래스의 부모인 body 태그에  perspective 속성을 적용하여
- 3000px 떨어진 위치에서 game-list를 바라보는 효과를 나타냄 */
+  game-list 클래스의 부모인 body 태그에  perspective 속성을 적용하여
+  3000px 떨어진 위치에서 game-list를 바라보는 효과를 나타냄 */
+  perspective: 3000px;
 
   /* perspective-origin 속성을 통해
- 관측자가 어느 방향에서 대상을 바라보는지 설정할 수 있다. */
-
-  perspective: 3000px;
+  관측자가 어느 방향에서 대상을 바라보는지 설정할 수 있다. */
   perspective-origin: 50% 20%;
 }
 
+a {
+  all: unset;
+}
+
+button {
+  all: unset;
+  cursor: pointer;
+}
+
+ul,
+li {
+  list-style: none;
+}
+
 /* //////////////////////////////////////////////////////// */
 
-.typing-text {
+.title-typing-text {
+  position: relative;
   font-size: 48px;
-  font-weight: 600;
   color: white;
-  margin-top: 100px;
   margin-bottom: 40px;
-
-  /* 타이핑 효과를 위한 설정 */
-
-  /* 우측 border로 커서 만들기 */
-  border-right: 3px solid white;
-  padding-right: 6px;
-
-  /* 가로가 길어져도 줄바꿈X */
-  white-space: nowrap;
-
-  /* 콘텐츠 길이를 초과하면 콘텐츠 숨김 */
-  overflow: hidden;
-
-  /* 1초 간격으로 cursor-blink 애니메이션 실행
-  2.5초동안 24단계에 걸쳐 typing 애니메이션 실행 */
-  animation: cursor-blink 1s infinite, typing 2.5s steps(24);
 }
 
-@keyframes cursor-blink {
+.title-typing-text::before {
+  content: "";
+  width: 4px;
+  height: 48px;
+  background-color: white;
+  position: absolute;
+  top: 50%;
+  right: -10px;
+  transform: translateY(-45%);
+  animation: blink 1s infinite;
+}
+
+.title-typing-text.stop-blinking::before {
+  animation: none;
+}
+
+@keyframes blink {
   50% {
-    border-color: transparent;
-  }
-}
-
-@keyframes typing {
-  from {
-    width: 0;
-  }
-  to {
-    width: 658px;
+    opacity: 0;
   }
 }
 
 /* //////////////////////////////////////////////////////// */
+
+.game-typing-text-wrapper {
+  display: flex;
+}
+
+.static-text {
+  font-size: 30px;
+  font-weight: bold;
+  color: white;
+  margin-right: 15px;
+}
 
 .dynamic-typing-texts {
-  height: 43px;
-  line-height: 43px;
+  height: 45px;
+  line-height: 45px;
   overflow: hidden;
 }
-
-/* slide 애니메이션을 통해 단어를 점점 위로 밀어올림 */
 
 .dynamic-typing-texts li {
   position: relative;
   top: 0;
-  font-size: 32px;
-  color: var(--second);
-  animation: slide 10.8s steps(6) infinite;
-  /* step = 단어 개수 */
+  line-height: 45px;
+  font-size: 30px;
+  color: var(--game-color);
+  animation: slide 6s steps(3) infinite;
 }
 
 @keyframes slide {
   100% {
-    top: -257px;
+    top: -135px;
   }
 }
 
-/* game-typing 애니메이션을 통해 커서를 왼쪽에서 오른쪽으로 이동시킴*/
-
-.dynamic-typing-texts li span {
-  position: relative;
-}
-
-.dynamic-typing-texts li span::after {
+.dynamic-typing-texts li::after {
   content: "";
+  position: absolute;
+  left: 0px;
   width: 100%;
   height: 100%;
-  border-left: 2px solid var(--second);
-  background-color: var(--main);
-  position: absolute;
-  left: 0;
-  animation: game-typing 1.8s steps(11) infinite;
-  /* step = 가장 긴 단어 길이 */
-  padding-bottom: 5px;
-  /* G마켓산스체 줄간격이 안맞아서 조절 */
+  background: var(--bg-color);
+  border-left: 3px solid var(--game-color);
+  animation: typing 2s steps(4) infinite;
 }
 
-@keyframes game-typing {
-  100% {
+@keyframes typing {
+  60%,
+  70% {
     left: 100%;
+  }
+  100% {
+    left: 0%;
   }
 }
 
@@ -156,11 +150,11 @@ body {
 .game-list {
   width: 250px;
   height: 300px;
+  margin: 80px 0 100px;
   padding: 40px;
-  margin-top: 80px;
-  margin-bottom: 100px;
+  font-family: "GmarketSansMedium";
 
-  /* transform 속성은 자식 요소가
+  /* transform-style 속성은 자식 요소가
   입체적인 3d 공간에 배치될지
   평면의 2d 공간에 배치될지를 결정함 */
   transform-style: preserve-3d;
@@ -208,11 +202,11 @@ body {
 }
 
 .game-info h2 {
-  color: var(--strong);
+  color: var(--card-title-color);
 }
 
 .game-info p {
-  color: var(--gray);
+  color: var(--card-desc-color);
 }
 
 /*
@@ -270,6 +264,4 @@ body {
     translateZ(calc(250px * 6 / 2 / 3.14));
 }
 
-button {
-  cursor: pointer;
-}
+/* //////////////////////////////////////////////////////// */
