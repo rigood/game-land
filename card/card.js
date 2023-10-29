@@ -14,6 +14,7 @@ let matchedCard = 0; // 짝이 맞은 카드 쌍의 수
 let disabled = false; // 카드를 못 뒤집게 막아놓은 상태, false이면 뒤집을 수 있음
 let cardOne = "";
 let cardTwo = "";
+let timer;
 
 function matchCards(img1, img2) {
   // 짝이 맞은 경우
@@ -35,8 +36,9 @@ function matchCards(img1, img2) {
     disabled = false;
 
     // 다 맞춘 경우 0.3초 뒤 게임 종료
-    if (matchCards === 8) {
+    if (matchedCard === 8) {
       setTimeout(() => {
+        clearInterval(timer);
         finishGame("✨ Mission Clear ✨");
       }, 300);
     }
@@ -123,11 +125,11 @@ function finishGame(status) {
 
 function initGame() {
   // 타이머 설정
-  timerText.innerText = TIME_IN_SECONDS;
-
-  let timer = setInterval(() => {
+  timer = setInterval(() => {
     timerText.innerText = timerText.innerText - 1;
   }, 1000);
+
+  timerText.innerText = TIME_IN_SECONDS;
 
   // 타임오버 되면 게임을 종료하고 타임오버 메세지 표시
   setTimeout(() => {
